@@ -1,0 +1,411 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title> Cookit | Home </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'img/favicon.png' %}">
+    <!-- Normalize Css -->
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <!-- Main Css -->
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <!-- Bootstrap Css -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="{% static 'css/fontawesome-all.min.css' %}">
+    <!-- Flaticon CSS -->
+    <link rel="stylesheet" href="{% static 'fonts/flaticon.css' %}">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Modernizr Js -->
+    <script src="{% static 'js/modernizr-3.6.0.min.js' %}"></script>
+    
+</head>
+
+<body>
+
+    <!-- Preloader Start Here -->
+    <div id="preloader"></div>
+    <!-- Preloader End Here -->
+    <!-- ScrollUp Start Here -->
+    <a href="#wrapper" data-type="section-switch" class="scrollup">
+        <i class="fas fa-angle-double-up"></i>
+    </a>
+    <!-- ScrollUp End Here -->
+    <div id="wrapper" class="wrapper">
+        <!-- Header Area Start Here -->
+        <header class="header-one">
+            <div id="header-main-menu" class="header-main-menu header-sticky">
+                <div class="container">                    
+                    <div class="row">
+                        <div class="col-lg-8 col-md-3 col-sm-4 col-4 possition-static">
+                            <div class="site-logo-mobile">
+                                <a href="/home" class="sticky-logo-light"><img src="https://www2.lunapic.com/do-not-link-here-use-hosting-instead/16748594318069916?40238682359" alt="Site Logo"></a>
+                                <a href="/home" class="sticky-logo-dark"><img src="https://www2.lunapic.com/do-not-link-here-use-hosting-instead/16748594318069916?40238682359" alt="Site Logo"></a>
+                            </div>
+                            <nav class="site-nav">
+                                <ul id="site-menu" class="site-menu">
+                                    <li><a href="/home">Home</a></li>
+                                    <li><a href="/all_reciepes">All Recipes</a></li>
+                                    <li><a href="/my_reciepes">My Recipes</a></li>
+                                    <li><a href="/categories">Categories</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="col-lg-4 col-md-9 col-sm-8 col-8 d-flex align-items-center justify-content-end">
+                            <div class="nav-action-elements-layout1">
+                                <ul>
+                                    <li>
+                                        <div class="cart-wrap cart-on-mobile d-lg-none">                                            
+                                            
+                                            
+                                        </div>
+                                    </li>
+                                    <li>
+                                    <a href="/login_page">
+                                        <button type="button" class="login-btn" data-toggle="modal" data-target="#myModal">
+                                            <i class="flaticon-profile"></i>Login
+                                        </button>
+                                    </a>
+                                    <li>
+                                        <a href="/add_reciepe_page" class="fill-btn"><i class="flaticon-plus-1"></i>Add
+                                            RECIPE</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mob-menu-open toggle-menu">
+                                <span class="bar"></span>
+                                <span class="bar"></span>
+                                <span class="bar"></span>
+                                <span class="bar"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-bottom d-none d-lg-block">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 d-none d-lg-block">
+                            <div class="nav-action-elements-layout2">
+                                
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 d-none d-lg-block">
+                            <div class="site-logo-desktop">
+                                <a href="/home" class="main-logo"><img src="https://www2.lunapic.com/do-not-link-here-use-hosting-instead/16748594318069916?40238682359" alt="Site Logo"></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="nav-action-elements-layout3">
+                                <ul>
+                                    <li>
+                                        <div class="header-search-box">
+                                            <a href="/search" title="Search" class="search-button">
+                                                <i class="flaticon-search"></i>
+                                            </a> 
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="cart-wrap d-none d-lg-block">                                            
+                                            <div class="cart-info">
+                                    
+                                            </div>                                   
+                                    
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Header Area End Here -->
+
+
+        <!-- Trending Recipe Start Here -->
+        <section class="padding-bottom-45">
+            <div class="container">
+                <div class="row gutters-60">
+                    <div class="col-lg-8">
+                        <div class="section-heading heading-dark">
+                            <h2 class="item-heading">TRENDING RECIPES</h2>
+                        </div>
+                        <div class="row">
+                            
+                            <div class="col-md-6 col-sm-6 col-12">
+                                <div class="product-box-layout1">
+                                    <figure class="item-figure"><a href="/reciepe_details"><img src="{% static 'img/product/product5.jpg' %}"
+                                                alt="Product"></a></figure>
+                                    <div class="item-content">
+                                        <span class="sub-title">CHICKEN</span>
+                                        <h3 class="item-title"><a href="/reciepe_details">Asian Chicken Noodles</a></h3>
+                                        <ul class="item-rating">
+                                            <li class="star-fill"><i class="fas fa-star"></i></li>
+                                            <li class="star-fill"><i class="fas fa-star"></i></li>
+                                            <li class="star-fill"><i class="fas fa-star"></i></li>
+                                            <li class="star-fill"><i class="fas fa-star"></i></li>
+                                            <li class="star-empty"><i class="fas fa-star"></i></li>
+                                            <li><span>9<span> / 10</span></span> </li>
+                                        </ul>
+                                    
+                                        <ul class="entry-meta">
+                                            <li><a href="#"><i class="fas fa-clock"></i>15 Mins</a></li>
+                                            <li><a href="#"><i class="fas fa-user"></i>by <span>John Martin</span></a></li>
+                                            <li><a href="#"><i class="fas fa-heart"></i><span>02</span> Likes</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-12">
+                                <div class="product-box-layout1">
+                                    <figure class="item-figure"><a href="/reciepe_details"><img src="{% static 'img/product/product6.jpg' %}"
+                                                alt="Product"></a></figure>
+                                    <div class="item-content">
+                                        <span class="sub-title">SALAD</span>
+                                        <h3 class="item-title"><a href="/reciepe_details">Italiano Salad Mixed</a></h3>
+                                        <ul class="item-rating">
+                                            <li class="star-fill"><i class="fas fa-star"></i></li>
+                                            <li class="star-fill"><i class="fas fa-star"></i></li>
+                                            <li class="star-fill"><i class="fas fa-star"></i></li>
+                                            <li class="star-fill"><i class="fas fa-star"></i></li>
+                                            <li class="star-empty"><i class="fas fa-star"></i></li>
+                                            <li><span>9<span> / 10</span></span> </li>
+                                        </ul>
+                                    
+                                        <ul class="entry-meta">
+                                            <li><a href="#"><i class="fas fa-clock"></i>15 Mins</a></li>
+                                            <li><a href="#"><i class="fas fa-user"></i>by <span>John Martin</span></a></li>
+                                            <li><a href="#"><i class="fas fa-heart"></i><span>02</span> Likes</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-12">
+                                <div class="product-box-layout1">
+                                    <figure class="item-figure"><a href="/reciepe_details"><img src="{% static 'img/product/product7.jpg' %}"
+                                                alt="Product"></a></figure>
+                                    <div class="item-content">
+                                        <span class="sub-title">DINNER</span>
+                                        <h3 class="item-title"><a href="/reciepe_details">Maxican Dessert</a></h3>
+                                        <ul class="item-rating">
+                                            <li class="star-fill"><i class="fas fa-star"></i></li>
+                                            <li class="star-fill"><i class="fas fa-star"></i></li>
+                                            <li class="star-fill"><i class="fas fa-star"></i></li>
+                                            <li class="star-fill"><i class="fas fa-star"></i></li>
+                                            <li class="star-empty"><i class="fas fa-star"></i></li>
+                                            <li><span>9<span> / 10</span></span> </li>
+                                        </ul>
+                                       
+                                        <ul class="entry-meta">
+                                            <li><a href="#"><i class="fas fa-clock"></i>15 Mins</a></li>
+                                            <li><a href="#"><i class="fas fa-user"></i>by <span>John Martin</span></a></li>
+                                            <li><a href="#"><i class="fas fa-heart"></i><span>02</span> Likes</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-12">
+                                <div class="product-box-layout1">
+                                    <figure class="item-figure"><a href="/reciepe_details"><img src="{% static 'img/product/product8.jpg' %}"
+                                                alt="Product"></a></figure>
+                                    <div class="item-content">
+                                        <span class="sub-title">JUICE</span>
+                                        <h3 class="item-title"><a href="/reciepe_details">Soypan Fruits Juice</a></h3>
+                                        <ul class="item-rating">
+                                            <li class="star-fill"><i class="fas fa-star"></i></li>
+                                            <li class="star-fill"><i class="fas fa-star"></i></li>
+                                            <li class="star-fill"><i class="fas fa-star"></i></li>
+                                            <li class="star-fill"><i class="fas fa-star"></i></li>
+                                            <li class="star-empty"><i class="fas fa-star"></i></li>
+                                            <li><span>9<span> / 10</span></span> </li>
+                                        </ul>
+                                       
+                                        <ul class="entry-meta">
+                                            <li><a href="#"><i class="fas fa-clock"></i>15 Mins</a></li>
+                                            <li><a href="#"><i class="fas fa-user"></i>by <span>John Martin</span></a></li>
+                                            <li><a href="#"><i class="fas fa-heart"></i><span>02</span> Likes</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-lg-4 sidebar-widget-area sidebar-break-md">
+                        
+                    
+                        <div class="widget">
+                            <div class="section-heading heading-dark">
+                                <h3 class="item-heading">CATEGORIES</h3>
+                            </div>
+                            <div class="widget-categories">
+                                <ul>
+                                    {% for category in categories %}
+                                    <li>
+                                        <a href="/category_reciepes/{{category.id}}">{{category.name}}
+                                            <span>({{category.reciepes.count}})</span>
+                                        </a>
+                                    </li>
+                                    {% endfor %}
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="widget">
+                            <div class="section-heading heading-dark">
+                                <h3 class="item-heading">LATEST RECIPES</h3>
+                            </div>
+                            <div class="widget-latest">
+                                <ul class="block-list">
+                                    <li class="single-item">
+                                        <div class="item-img">
+                                            <a href="#"><img src="{% static 'img/product/latest1.jpg' %}" alt="Post"></a>
+                                            <div class="count-number">1</div>
+                                        </div>
+                                        <div class="item-content">
+                                            <div class="item-ctg">DESERT</div>
+                                            <h4 class="item-title"><a href="#">Salami Oven Roasted are
+                                                    Mozzarella Oelette</a></h4>
+                                            <div class="item-post-by"><a href="/reciepe_details"><i class="fas fa-user"></i><span>by</span>
+                                                    John Martin</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="single-item">
+                                        <div class="item-img">
+                                            <a href="#"><img src="{% static 'img/product/latest2.jpg' %}" alt="Post"></a>
+                                            <div class="count-number">2</div>
+                                        </div>
+                                        <div class="item-content">
+                                            <div class="item-ctg">DESERT</div>
+                                            <h4 class="item-title"><a href="#">Salami Oven Roasted are
+                                                    Mozzarella Oelette</a></h4>
+                                            <div class="item-post-by"><a href="/reciepe_details"><i class="fas fa-user"></i><span>by</span>
+                                                    John Martin</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="single-item">
+                                        <div class="item-img">
+                                            <a href="#"><img src="{% static 'img/product/latest3.jpg' %}" alt="Post"></a>
+                                            <div class="count-number">3</div>
+                                        </div>
+                                        <div class="item-content">
+                                            <div class="item-ctg">DESERT</div>
+                                            <h4 class="item-title"><a href="#">Salami Oven Roasted are
+                                                    Mozzarella Oelette</a></h4>
+                                            <div class="item-post-by"><a href="/reciepe_details"><i class="fas fa-user"></i><span>by</span>
+                                                    John Martin</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="single-item">
+                                        <div class="item-img">
+                                            <a href="#"><img src="{% static 'img/product/latest4.jpg' %}" alt="Post"></a>
+                                            <div class="count-number">4</div>
+                                        </div>
+                                        <div class="item-content">
+                                            <div class="item-ctg">DESERT</div>
+                                            <h4 class="item-title"><a href="#">Salami Oven Roasted are
+                                                    Mozzarella Oelette</a></h4>
+                                            <div class="item-post-by"><a href="/reciepe_details"><i class="fas fa-user"></i><span>by</span>
+                                                    John Martin</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="single-item">
+                                        <div class="item-img">
+                                            <a href="#"><img src="{% static 'img/product/latest2.jpg' %}" alt="Post"></a>
+                                            <div class="count-number">3</div>
+                                        </div>
+                                        <div class="item-content">
+                                            <div class="item-ctg">DESERT</div>
+                                            <h4 class="item-title"><a href="#">Salami Oven Roasted are
+                                                    Mozzarella Oelette</a></h4>
+                                            <div class="item-post-by"><a href="/reciepe_details"><i class="fas fa-user"></i><span>by</span>
+                                                    John Martin</a></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+        
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Trending Recipe End Here -->
+
+        <!-- Instagram Start Here -->
+        <section class="instagram-feed-wrap">
+            <div class="instagram-feed-title"><a href="#"><i class="fab fa-instagram"></i>Follow On Instagram</a></div>
+            <ul class="instagram-feed-figure">
+                <li>
+                    <a href="/reciepe_details"><img src="{% static 'img/social-figure/social-figure1.jpg' %}" alt="Social"></a>
+                </li>
+                <li>
+                    <a href="/reciepe_details"><img src="{% static 'img/social-figure/social-figure2.jpg' %}" alt="Social"></a>
+                </li>
+                <li>
+                    <a href="/reciepe_details"><img src="{% static 'img/social-figure/social-figure3.jpg' %}" alt="Social"></a>
+                </li>
+                <li>
+                    <a href="/reciepe_details"><img src="{% static 'img/social-figure/social-figure4.jpg' %}" alt="Social"></a>
+                </li>
+                <li>
+                    <a href="/reciepe_details"><img src="{% static 'img/social-figure/social-figure5.jpg' %}" alt="Social"></a>
+                </li>
+                <li>
+                    <a href="/reciepe_details"><img src="{% static 'img/social-figure/social-figure6.jpg' %}" alt="Social"></a>
+                </li>
+                <li>
+                    <a href="/reciepe_details"><img src="{% static 'img/social-figure/social-figure7.jpg' %}" alt="Social"></a>
+                </li>
+                <li>
+                    <a href="/reciepe_details"><img src="{% static 'img/social-figure/social-figure8.jpg' %}" alt="Social"></a>
+                </li>
+            </ul>
+        </section>
+        <!-- Instagram End Here -->
+
+    </div>
+    <!-- Search Box Start Here -->
+    <div id="search" class="search-wrap">
+        <button type="button" class="close">×</button>
+        <form class="search-form">
+            <input type="search" id="ooooo" value="" placeholder="Type here........" />
+            <button type="submit" class="search-btn"><i class="flaticon-search"></i></button>
+        </form>
+    </div>
+    <!-- Search Box End Here -->
+
+        <!-- Jquery Js -->
+        <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+        <!-- Bootstrap Js -->
+        <script src="{% static 'js/popper.min.js' %}"></script>
+        <!-- Bootstrap Js -->
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <!-- Plugins Js -->
+        <script src="{% static 'js/plugins.js' %}"></script>
+        <!-- Owl Carousel Js -->
+        <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+        <!-- Smoothscroll Js -->
+        <script src="{% static 'js/smoothscroll.min.js' %}"></script>
+        <!-- Custom Js -->
+        <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+
+</html>
