@@ -1,177 +1,1248 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seyada Shaer — Healthcare Data Analyst & BI Specialist</title>
+  <meta name="description" content="Portfolio of Seyada Shaer — Medical Doctor, Certified Power BI Data Analyst, and Healthcare BI Specialist based in Ramallah, Palestine." />
 
-  <title>Seyada Shaer Portfolio</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <style>
+    /* ── Reset & Base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    :root {
+      --navy:    #0f1b2d;
+      --navy2:   #1e3a5f;
+      --teal:    #00b4a0;
+      --teal-dk: #008f7e;
+      --slate:   #8899aa;
+      --off-wh:  #f0f4f8;
+      --white:   #ffffff;
+      --text:    #1a2c3d;
+      --muted:   #5a7080;
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+      --font-display: 'Playfair Display', serif;
+      --font-body:    'DM Sans', sans-serif;
+      --font-mono:    'JetBrains Mono', monospace;
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+      --section-pad: 5rem 1.5rem;
+      --max-w: 960px;
+    }
 
-  <!-- =======================================================
-  * Template Name: iPortfolio - v3.10.0
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--white);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    a { color: var(--teal); text-decoration: none; }
+    a:hover { color: var(--teal-dk); }
+
+    /* ── Nav ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(15, 27, 45, 0.96);
+      backdrop-filter: blur(8px);
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+
+    .nav-logo {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--teal);
+      letter-spacing: 0.08em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.75);
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--teal); }
+
+    /* Hamburger */
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      flex-direction: column;
+      gap: 5px;
+      padding: 4px;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    /* ── Hero ── */
+    #hero {
+      min-height: 100vh;
+      background: var(--navy);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 7rem 1.5rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Subtle grid background */
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0,180,160,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,180,160,0.06) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+
+    /* ECG / data-pulse waveform — the signature element */
+    .pulse-line {
+      width: min(560px, 90vw);
+      margin: 0 auto 2.5rem;
+      opacity: 0.55;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--teal);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .hero-name {
+      font-family: var(--font-display);
+      font-size: clamp(2.6rem, 6vw, 4.2rem);
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-sub {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      color: rgba(255,255,255,0.62);
+      max-width: 560px;
+      margin: 0 auto 2.4rem;
+      font-weight: 300;
+      line-height: 1.65;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      justify-content: center;
+      margin-bottom: 2.8rem;
+    }
+
+    .hero-tags span {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--teal);
+      border: 1px solid rgba(0,180,160,0.4);
+      border-radius: 4px;
+      padding: 0.3rem 0.75rem;
+      letter-spacing: 0.06em;
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--teal);
+      color: var(--navy);
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 0.75rem 1.8rem;
+      border-radius: 6px;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .hero-cta:hover {
+      background: var(--teal-dk);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgba(255,255,255,0.25);
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      letter-spacing: 0.1em;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50%       { transform: translateX(-50%) translateY(6px); }
+    }
+
+    /* ── Section Shared ── */
+    section { padding: var(--section-pad); }
+    .container { max-width: var(--max-w); margin: 0 auto; }
+
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      color: var(--teal);
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title {
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 0.6rem;
+      line-height: 1.2;
+    }
+
+    .section-title.light { color: var(--white); }
+
+    .section-divider {
+      width: 40px;
+      height: 3px;
+      background: var(--teal);
+      border-radius: 2px;
+      margin-bottom: 2.5rem;
+    }
+
+    /* ── About ── */
+    #about { background: var(--off-wh); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 3.5rem;
+      align-items: start;
+    }
+
+    .about-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 2rem;
+      border: 1px solid #dde6ef;
+    }
+
+    .about-card h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--navy2);
+      margin-bottom: 1.2rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid #e0e8ef;
+    }
+
+    .about-detail {
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+
+    .about-detail dt {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      color: var(--teal);
+      text-transform: uppercase;
+    }
+
+    .about-detail dd {
+      font-size: 0.93rem;
+      color: var(--text);
+      margin-left: 0;
+      margin-bottom: 0.5rem;
+    }
+
+    .about-detail dd a { color: var(--teal); }
+
+    .about-text p {
+      color: var(--muted);
+      font-size: 0.97rem;
+      margin-bottom: 1rem;
+    }
+
+    .about-text p strong { color: var(--text); }
+
+    /* ── Skills ── */
+    #skills { background: var(--white); }
+
+    .skills-groups {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .skill-group {
+      background: var(--off-wh);
+      border-radius: 10px;
+      padding: 1.5rem;
+      border-left: 3px solid var(--teal);
+    }
+
+    .skill-group h4 {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--navy2);
+      margin-bottom: 1rem;
+      letter-spacing: 0.03em;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+
+    .skill-tags .tag {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      background: var(--white);
+      color: var(--navy2);
+      border: 1px solid #ccd8e4;
+      border-radius: 4px;
+      padding: 0.25rem 0.6rem;
+    }
+
+    /* ── Experience ── */
+    #experience { background: var(--navy); }
+    #experience .section-label { color: var(--teal); }
+    #experience .section-divider { background: var(--teal); }
+
+    .timeline {
+      position: relative;
+      padding-left: 1.8rem;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 6px; bottom: 0;
+      width: 2px;
+      background: rgba(0,180,160,0.25);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 2.8rem;
+    }
+
+    .timeline-item:last-child { margin-bottom: 0; }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -1.8rem;
+      top: 6px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--teal);
+      border: 2px solid var(--navy);
+    }
+
+    .tl-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .tl-date {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--teal);
+      letter-spacing: 0.08em;
+    }
+
+    .tl-org {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--slate);
+    }
+
+    .tl-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 0.6rem;
+    }
+
+    .tl-body {
+      color: rgba(255,255,255,0.6);
+      font-size: 0.93rem;
+      line-height: 1.7;
+    }
+
+    .tl-body ul {
+      padding-left: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    .tl-body li { margin-bottom: 0.35rem; }
+
+    /* ── Certifications ── */
+    #certifications { background: var(--off-wh); }
+
+    .certs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.2rem;
+    }
+
+    .cert-card {
+      background: var(--white);
+      border-radius: 10px;
+      padding: 1.4rem 1.5rem;
+      border: 1px solid #dde6ef;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      transition: box-shadow 0.2s, border-color 0.2s;
+    }
+
+    .cert-card:hover {
+      border-color: var(--teal);
+      box-shadow: 0 4px 18px rgba(0,180,160,0.1);
+    }
+
+    .cert-icon {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: rgba(0,180,160,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+    }
+
+    .cert-info h4 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 0.2rem;
+      line-height: 1.35;
+    }
+
+    .cert-info p {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .cert-info .cert-date {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--teal);
+      margin-top: 0.3rem;
+    }
+
+    /* ── Projects ── */
+    #projects { background: var(--white); }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      border-radius: 12px;
+      border: 1px solid #dde6ef;
+      overflow: hidden;
+      transition: box-shadow 0.2s, transform 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(15,27,45,0.1);
+    }
+
+    .project-thumb {
+      height: 160px;
+      background: var(--navy2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Subtle pattern for placeholder thumbs */
+    .project-thumb::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        45deg,
+        rgba(0,180,160,0.05),
+        rgba(0,180,160,0.05) 8px,
+        transparent 8px,
+        transparent 22px
+      );
+    }
+
+    .project-thumb .thumb-icon {
+      position: relative;
+      z-index: 1;
+      font-size: 2.2rem;
+      opacity: 0.65;
+    }
+
+    .project-body {
+      padding: 1.4rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-domain {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--teal);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+
+    .project-body h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 0.6rem;
+      line-height: 1.35;
+    }
+
+    .project-body p {
+      font-size: 0.87rem;
+      color: var(--muted);
+      line-height: 1.65;
+      flex: 1;
+    }
+
+    .project-tools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 1rem;
+    }
+
+    .project-tools span {
+      font-family: var(--font-mono);
+      font-size: 0.66rem;
+      background: var(--off-wh);
+      color: var(--navy2);
+      border-radius: 3px;
+      padding: 0.2rem 0.5rem;
+    }
+
+    .project-note {
+      font-size: 0.75rem;
+      color: rgba(90,112,128,0.6);
+      font-style: italic;
+      margin-top: 0.6rem;
+    }
+
+    /* ── Contact ── */
+    #contact { background: var(--navy); }
+    #contact .section-label { color: var(--teal); }
+    #contact .section-divider { background: var(--teal); }
+
+    .contact-intro {
+      color: rgba(255,255,255,0.6);
+      font-size: 1rem;
+      margin-bottom: 2.5rem;
+      max-width: 520px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+      max-width: 600px;
+    }
+
+    .contact-item {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(0,180,160,0.2);
+      border-radius: 10px;
+      padding: 1.2rem 1.4rem;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .contact-item:hover {
+      border-color: var(--teal);
+      background: rgba(0,180,160,0.07);
+    }
+
+    .contact-item .ci-icon {
+      font-size: 1.4rem;
+      color: var(--teal);
+    }
+
+    .contact-item dt {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--slate);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .contact-item dd {
+      font-size: 0.92rem;
+      color: var(--white);
+      margin: 0;
+    }
+
+    .contact-item dd a {
+      color: var(--white);
+      transition: color 0.2s;
+    }
+
+    .contact-item dd a:hover { color: var(--teal); }
+
+    /* ── Footer ── */
+    footer {
+      background: #080f1a;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.25);
+      font-family: var(--font-mono);
+    }
+
+    /* ── Back to top ── */
+    .back-to-top {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      width: 40px;
+      height: 40px;
+      background: var(--teal);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--navy);
+      font-size: 1.1rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s, transform 0.2s;
+      z-index: 99;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .back-to-top:hover { transform: translateY(-3px); color: var(--navy); }
+
+    /* ── Responsive ── */
+    @media (max-width: 720px) {
+      .nav-links { display: none; flex-direction: column; gap: 1rem; }
+      .nav-links.open {
+        display: flex;
+        position: absolute;
+        top: 60px; left: 0; right: 0;
+        background: var(--navy);
+        padding: 1.5rem 2rem;
+        border-top: 1px solid rgba(255,255,255,0.08);
+      }
+      .nav-toggle { display: flex; }
+      .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; }
+      html { scroll-behavior: auto; }
+    }
+  </style>
 </head>
 
 <body>
 
-  <!-- ======= Mobile nav toggle button ======= -->
-  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+  <!-- ══ NAV ══ -->
+  <nav>
+    <span class="nav-logo">seyada.shaer</span>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#projects">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 
-  <!-- ======= Header ======= -->
-  <header id="header">
-    <div class="d-flex flex-column">
 
-      <div class="profile">
-        <img src="https://media.licdn.com/dms/image/D4D03AQFizHHu8Wz5BQ/profile-displayphoto-shrink_800_800/0/1674580200206?e=1680134400&v=beta&t=b8vlS46kjrIn8oLYAJK3jtyUr9VDzKVh6_wJISs5DoE" alt="" >
-        <h1 class="text-light"><a href="index.html">Seyada Shaer</a></h1>
-        <div class="social-links mt-3 text-center">
-          <a href="https://github.com/Seyadashaer" class="github"><i class="bx bxl-github"></i></a>
-          <a href="https://www.linkedin.com/in/seyadashaer/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-          <a href="https://www.facebook.com/seyadashaer" class="facebook"><i class="bx bxl-facebook"></i></a>
+  <!-- ══ HERO ══ -->
+  <section id="hero">
 
+    <!-- ECG / data-pulse signature element -->
+    <svg class="pulse-line" viewBox="0 0 560 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polyline
+        points="0,30 60,30 80,30 90,8 100,52 112,18 122,42 132,30 200,30 220,30 232,10 244,50 252,22 260,38 268,30 340,30 360,30 370,12 382,48 392,20 402,40 412,30 480,30 560,30"
+        stroke="#00b4a0"
+        stroke-width="1.8"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+
+    <p class="hero-eyebrow">Healthcare Data Analytics &amp; Business Intelligence</p>
+    <h1 class="hero-name">Seyada Shaer</h1>
+    <p class="hero-sub">
+      Medical Doctor turned Data Analyst — building dashboards, clinical registries, and KPI frameworks that help healthcare organizations make better decisions.
+    </p>
+    <div class="hero-tags">
+      <span>Power BI</span>
+      <span>SQL</span>
+      <span>Healthcare Data</span>
+      <span>Clinical Registries</span>
+      <span>Hospital KPIs</span>
+      <span>MEAL</span>
+      <span>Data Quality</span>
+    </div>
+    <a href="#contact" class="hero-cta">Get in touch ↓</a>
+    <span class="scroll-hint">scroll</span>
+  </section>
+
+
+  <!-- ══ ABOUT ══ -->
+  <section id="about">
+    <div class="container">
+      <p class="section-label">Background</p>
+      <h2 class="section-title">About Me</h2>
+      <div class="section-divider"></div>
+
+      <div class="about-grid">
+
+        <!-- Quick facts card -->
+        <div class="about-card">
+          <h3>Quick Info</h3>
+          <dl class="about-detail">
+            <dt>Location</dt>
+            <dd>Ramallah, Palestine</dd>
+            <dt>Email</dt>
+            <dd><a href="mailto:Seyadashaer@gmail.com">Seyadashaer@gmail.com</a></dd>
+            <dt>Phone</dt>
+            <dd><a href="tel:+970597159396">+970 597 159 396</a></dd>
+            <dt>LinkedIn</dt>
+            <dd><a href="https://linkedin.com/in/seyadashaer" target="_blank" rel="noopener">linkedin.com/in/seyadashaer</a></dd>
+            <dt>GitHub</dt>
+            <dd><a href="https://github.com/Seyadashaer" target="_blank" rel="noopener">github.com/Seyadashaer</a></dd>
+            <dt>Education</dt>
+            <dd>Doctor of Medicine — An-Najah National University</dd>
+          </dl>
         </div>
-      </div>
 
-      <nav id="navbar" class="nav-menu navbar">
-        <ul>
-          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
-        </ul>
-      </nav><!-- .nav-menu -->
-    </div>
-  </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-    <div class="hero-container" data-aos="fade-in">
-      <h1>Seyada Shaer</h1>
-      <p>I'm <span class="typed" data-typed-items="Software Developer,Medical Doctor, Intersted in healthcare IT"></span></p>
-    </div>
-  </section><!-- End Hero -->
-
-  <main id="main">
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>About</h2>
-          <p>              Full-Stack Developer with a background in Medicine from An-Najah National University. I recently completed an intensive full-stack development Bootcamp at AXSOS academy where I learned the fundamentals of web development such as HTML, CSS, and JavaScript. Additionally, I gained proficiency in Python and its popular frameworks, Flask and Django. I am excited to apply these skills to real-world projects and continue to expand my knowledge and skills.
+        <!-- Bio -->
+        <div class="about-text">
+          <p>
+            I'm a <strong>Data Analyst and Business Intelligence Specialist</strong> with a background in medicine. Over the past two years, I've been building reporting systems, clinical registries, and Power BI dashboards for hospital networks in Palestine — translating raw clinical and operational data into insights that support executive decision-making and hospital performance management.
           </p>
-  
-    </div>
+          <p>
+            My medical degree gives me an uncommon advantage: I understand the data I work with — ICD codes, clinical workflows, EHR structures, and the real-world meaning behind the numbers. That foundation shapes how I design data systems and communicate findings to both clinical and non-clinical stakeholders.
+          </p>
+          <p>
+            I hold certifications in <strong>Microsoft Power BI (PL-300)</strong>, <strong>Certified Health Data Analyst (CHDA)</strong>, and <strong>MEAL DPro</strong>, and I've completed nanodegrees in both Data Analysis and Data Science. I also have a software development background, which means I can work directly with databases, write clean SQL, and build end-to-end data pipelines without relying on intermediaries.
+          </p>
+          <p>
+            I'm drawn to work at the intersection of healthcare, data quality, and organizational learning — where better data leads to better care.
+          </p>
+        </div>
 
-        <div class="row">
-          <div class="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/profile-img.jpg" class="img-fluid" id="my_image">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══ SKILLS ══ -->
+  <section id="skills">
+    <div class="container">
+      <p class="section-label">Capabilities</p>
+      <h2 class="section-title">Skills</h2>
+      <div class="section-divider"></div>
+
+      <div class="skills-groups">
+
+        <div class="skill-group">
+          <h4>📊 Analytics &amp; Visualization</h4>
+          <div class="skill-tags">
+            <span class="tag">Power BI</span>
+            <span class="tag">DAX</span>
+            <span class="tag">Power Query</span>
+            <span class="tag">KPI Design</span>
+            <span class="tag">Dashboarding</span>
+            <span class="tag">Data Storytelling</span>
+            <span class="tag">Excel (Advanced)</span>
           </div>
-          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3> Full-Stack Web Developer</h3>
-            <p class="fst-italic">
-            </p>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>3 August 1997</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>https://seyadashaer.github.io/</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+970 597159396</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Nablus | Palestine</span></li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>25</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Full- Stack</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>PhEmailone:</strong> <span>Seyadashaer@gmail.com</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
-                </ul>
-              </div>
-            </div>
-            
+        </div>
+
+        <div class="skill-group">
+          <h4>🗄️ Data Engineering</h4>
+          <div class="skill-tags">
+            <span class="tag">SQL</span>
+            <span class="tag">SQL Server</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">ETL Pipelines</span>
+            <span class="tag">Data Modeling</span>
+            <span class="tag">Data Validation</span>
+            <span class="tag">REST API</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h4>🏥 Healthcare Data</h4>
+          <div class="skill-tags">
+            <span class="tag">EHR / HIS Systems</span>
+            <span class="tag">Clinical Registries</span>
+            <span class="tag">ICD-10</span>
+            <span class="tag">Medical Data Abstraction</span>
+            <span class="tag">Health KPIs</span>
+            <span class="tag">Data Dictionaries</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h4>📋 MEAL &amp; Reporting</h4>
+          <div class="skill-tags">
+            <span class="tag">Indicator Tracking</span>
+            <span class="tag">Monitoring &amp; Evaluation</span>
+            <span class="tag">Data Collection Tools</span>
+            <span class="tag">Registry Documentation</span>
+            <span class="tag">Reporting Systems</span>
+            <span class="tag">Benchmarking</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h4>💻 Programming &amp; Tools</h4>
+          <div class="skill-tags">
+            <span class="tag">Python</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Git / GitHub</span>
+            <span class="tag">AWS EC2</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">HTML / CSS</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h4>🤝 Collaboration</h4>
+          <div class="skill-tags">
+            <span class="tag">Stakeholder Reporting</span>
+            <span class="tag">Cross-functional Teams</span>
+            <span class="tag">Executive Presentations</span>
+            <span class="tag">Clinical Team Liaison</span>
+            <span class="tag">Documentation</span>
           </div>
         </div>
 
       </div>
-    </section><!-- End About Section -->
+    </div>
+  </section>
 
-    
 
-    <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills section-bg">
-      <div class="container">
+  <!-- ══ EXPERIENCE ══ -->
+  <section id="experience">
+    <div class="container">
+      <p class="section-label">Career</p>
+      <h2 class="section-title light">Experience</h2>
+      <div class="section-divider"></div>
 
-        <div class="section-title">
-          <h2>Skills</h2>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="tl-meta">
+            <span class="tl-date">Apr 2023 – Present</span>
+            <span class="tl-org">· Arab Hospitals Group, Ramallah</span>
+          </div>
+          <h3 class="tl-title">Data Analysis Lead</h3>
+          <div class="tl-body">
+            <p>Lead data reporting across three hospitals — IAH, SAH, and ISH — delivering monthly and quarterly performance reports to executive leadership and board members.</p>
+            <ul>
+              <li>Built automated Power BI dashboards monitoring key hospital indicators: admissions, surgeries, inpatient days, outpatient visits, bed occupancy, and revenues.</li>
+              <li>Designed comparative reporting tools for forecast vs. actuals, cross-hospital benchmarking, and trend tracking over six quarters.</li>
+              <li>Standardized KPIs and harmonized data definitions across facilities to improve consistency in performance evaluation.</li>
+              <li>Oversaw data validation, verification, and quality control processes to ensure reliable and timely reporting.</li>
+              <li>Supported strategic decision-making by providing data-driven insights aligned with hospital planning cycles.</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="row skills-content">
-
-          <div class="col-lg-6" data-aos="fade-up">
-
-            <div class="progress">
-              <span class="skill">HTML <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">CSS <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">JavaScript <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
+        <div class="timeline-item">
+          <div class="tl-meta">
+            <span class="tl-date">Mar 2022 – Apr 2023</span>
+            <span class="tl-org">· Istishari Arab Hospital, Ramallah</span>
           </div>
+          <h3 class="tl-title">Data Analyst</h3>
+          <div class="tl-body">
+            <p>Designed and implemented clinical data infrastructure for a multi-specialty hospital environment.</p>
+            <ul>
+              <li>Built clinical registries across cardiovascular, neurosurgery, vascular, obstetrics, GI, and general surgery specialties.</li>
+              <li>Developed data dictionaries, collection tools, and documentation protocols to ensure standardized, high-quality clinical data.</li>
+              <li>Conducted medical data abstraction from EHR systems; led iterative registry testing and validation.</li>
+              <li>Built interactive Power BI dashboards for clinical, operational, and financial KPIs — including a specialized IVF center performance tracker.</li>
+              <li>Extracted, cleaned, and transformed data from HIS and financial systems using SQL and ETL pipelines.</li>
+              <li>Conducted trend analysis and process optimization reviews to identify inefficiencies in medical and financial operations.</li>
+            </ul>
+          </div>
+        </div>
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="timeline-item">
+          <div class="tl-meta">
+            <span class="tl-date">2022 – 2023</span>
+            <span class="tl-org">· Rafidia Surgical Hospital, Nablus</span>
+          </div>
+          <h3 class="tl-title">Intern Medical Doctor</h3>
+          <div class="tl-body">
+            <p>Completed clinical internship rotations across surgical departments, developing direct experience with hospital workflows, patient data systems, and clinical documentation practices.</p>
+          </div>
+        </div>
 
-            <div class="progress">
-              <span class="skill">Python <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
+        <div class="timeline-item">
+          <div class="tl-meta">
+            <span class="tl-date">2022 – 2023</span>
+            <span class="tl-org">· AXSOS Academy / Coding Dojo, Ramallah</span>
+          </div>
+          <h3 class="tl-title">Software Development Intern</h3>
+          <div class="tl-body">
+            <p>Completed an intensive full-stack bootcamp (1,200+ coding hours), building proficiency in Python, SQL, JavaScript, Flask, Django, REST APIs, and Git — skills that now support my data engineering work.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══ CERTIFICATIONS ══ -->
+  <section id="certifications">
+    <div class="container">
+      <p class="section-label">Credentials</p>
+      <h2 class="section-title">Certifications</h2>
+      <div class="section-divider"></div>
+
+      <div class="certs-grid">
+
+        <div class="cert-card">
+          <div class="cert-icon">📋</div>
+          <div class="cert-info">
+            <h4>MEAL DPro</h4>
+            <p>Monitoring, Evaluation, Accountability &amp; Learning</p>
+            <p>PM4NGOs</p>
+            <p class="cert-date">Issued October 2025</p>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">📊</div>
+          <div class="cert-info">
+            <h4>Certified Power BI Data Analyst (PL-300)</h4>
+            <p>Microsoft</p>
+            <p class="cert-date">Issued December 2024</p>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">🏥</div>
+          <div class="cert-info">
+            <h4>Certified Health Data Analyst (CHDA)</h4>
+            <p>AHIMA — American Health Information Management Association</p>
+            <p class="cert-date">Issued June 2025</p>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">🎓</div>
+          <div class="cert-info">
+            <h4>Data Analysis Nanodegree</h4>
+            <p>Udacity &amp; Palestine Launchpad</p>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">🔬</div>
+          <div class="cert-info">
+            <h4>Data Science Nanodegree</h4>
+            <p>Udacity &amp; Palestine Launchpad</p>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">💻</div>
+          <div class="cert-info">
+            <h4>Software Developer Certificate</h4>
+            <p>AXSOS Academy &amp; Coding Dojo</p>
+            <p class="cert-date">2022 – 2023</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══ PROJECTS ══ -->
+  <section id="projects">
+    <div class="container">
+      <p class="section-label">Selected Work</p>
+      <h2 class="section-title">Projects</h2>
+      <div class="section-divider"></div>
+
+      <!-- NOTE: Add your own screenshots by replacing the emoji icons and setting a background-image on .project-thumb -->
+
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-thumb">
+            <span class="thumb-icon">🏥</span>
+            <!-- TODO: Add screenshot → style="background-image: url('assets/img/proj-hospital-bi.jpg'); background-size:cover;" -->
+          </div>
+          <div class="project-body">
+            <p class="project-domain">Hospital Performance · Power BI</p>
+            <h3>Multi-Hospital Executive Dashboard</h3>
+            <p>Automated reporting system tracking key performance indicators across three hospitals — admissions, bed occupancy, surgery volumes, revenues, and outpatient visits. Designed for monthly and quarterly executive review with forecast vs. actuals comparison.</p>
+            <div class="project-tools">
+              <span>Power BI</span><span>DAX</span><span>SQL Server</span><span>Power Query</span>
             </div>
+            <p class="project-note">📷 Screenshot coming soon — Arab Hospitals Group</p>
+          </div>
+        </div>
 
-            <div class="progress">
-              <span class="skill">Django <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
+        <div class="project-card">
+          <div class="project-thumb">
+            <span class="thumb-icon">🫀</span>
+          </div>
+          <div class="project-body">
+            <p class="project-domain">Clinical Registries · Data Infrastructure</p>
+            <h3>Multi-Specialty Clinical Registry System</h3>
+            <p>Designed and deployed clinical registries for six specialties — cardiovascular, neurosurgery, vascular surgery, obstetrics, GI, and general surgery. Includes data dictionaries, collection tools, validation protocols, and EHR abstraction workflows.</p>
+            <div class="project-tools">
+              <span>SQL</span><span>ETL</span><span>HIS Integration</span><span>ICD-10</span>
             </div>
+            <p class="project-note">📷 Screenshot coming soon — Istishari Arab Hospital</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-thumb">
+            <span class="thumb-icon">🧪</span>
+          </div>
+          <div class="project-body">
+            <p class="project-domain">Specialty Analytics · Power BI</p>
+            <h3>IVF Center Performance Tracker</h3>
+            <p>Interactive Power BI dashboard built for an IVF center, monitoring clinical cycle metrics, success rates, and operational KPIs. Enabled department-level learning and performance review cycles.</p>
+            <div class="project-tools">
+              <span>Power BI</span><span>DAX</span><span>Clinical KPIs</span>
+            </div>
+            <p class="project-note">📷 Screenshot coming soon — Istishari Arab Hospital</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-thumb">
+            <span class="thumb-icon">📈</span>
+          </div>
+          <div class="project-body">
+            <p class="project-domain">Financial Analytics · Reporting</p>
+            <h3>Hospital Financial Intelligence Reports</h3>
+            <p>Built financial KPI reporting pipelines connecting HIS and financial systems. Identified outliers and inefficiencies in billing patterns and revenue trends, supporting operational and financial decision-making.</p>
+            <div class="project-tools">
+              <span>SQL</span><span>Power BI</span><span>ETL</span><span>Financial KPIs</span>
+            </div>
+            <p class="project-note">📷 Screenshot coming soon</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-thumb">
+            <span class="thumb-icon">📋</span>
+          </div>
+          <div class="project-body">
+            <p class="project-domain">MEAL · NGO / Data Systems</p>
+            <h3>MEAL Framework &amp; Indicator Tracking</h3>
+            <p>Applied MEAL DPro methodology to design monitoring and evaluation frameworks, including indicator tracking systems, data quality checklists, and learning reports aligned with organizational accountability standards.</p>
+            <div class="project-tools">
+              <span>MEAL DPro</span><span>Excel</span><span>Indicator Design</span>
+            </div>
+            <p class="project-note">📷 Add project details or link here</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-thumb">
+            <span class="thumb-icon">🔬</span>
+          </div>
+          <div class="project-body">
+            <p class="project-domain">Data Science · Python</p>
+            <h3>Data Science &amp; Analysis Projects</h3>
+            <p>Academic and personal projects completed during Udacity nanodegrees — covering exploratory data analysis, data wrangling, statistical inference, and machine learning fundamentals in Python.</p>
+            <div class="project-tools">
+              <span>Python</span><span>Pandas</span><span>NumPy</span><span>Matplotlib</span>
+            </div>
+            <p class="project-note">🔗 <a href="https://github.com/Seyadashaer" target="_blank" rel="noopener">View on GitHub</a></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══ CONTACT ══ -->
+  <section id="contact">
+    <div class="container">
+      <p class="section-label">Let's Connect</p>
+      <h2 class="section-title light">Contact</h2>
+      <div class="section-divider"></div>
+
+      <p class="contact-intro">
+        I'm open to roles in healthcare data analytics, BI, and MEAL — as well as collaborations on data quality and clinical registry projects. Feel free to reach out directly.
+      </p>
+
+      <div class="contact-grid">
+
+        <div class="contact-item">
+          <div class="ci-icon">✉️</div>
+          <dl>
+            <dt>Email</dt>
+            <dd><a href="mailto:Seyadashaer@gmail.com">Seyadashaer@gmail.com</a></dd>
+          </dl>
+        </div>
+
+        <div class="contact-item">
+          <div class="ci-icon">📞</div>
+          <dl>
+            <dt>Phone</dt>
+            <dd><a href="tel:+970597159396">+970 597 159 396</a></dd>
+          </dl>
+        </div>
+
+        <div class="contact-item">
+          <div class="ci-icon">🔗</div>
+          <dl>
+            <dt>LinkedIn</dt>
+            <dd><a href="https://linkedin.com/in/seyadashaer" target="_blank" rel="noopener">linkedin.com/in/seyadashaer</a></dd>
+          </dl>
+        </div>
+
+        <div class="contact-item">
+          <div class="ci-icon">💻</div>
+          <dl>
+            <dt>GitHub</dt>
+            <dd><a href="https://github.com/Seyadashaer" target="_blank" rel="noopener">github.com/Seyadashaer</a></dd>
+          </dl>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══ FOOTER ══ -->
+  <footer>
+    <p>© 2025 Seyada Shaer &nbsp;·&nbsp; Ramallah, Palestine &nbsp;·&nbsp; Healthcare Data &amp; BI</p>
+  </footer>
+
+
+  <!-- ══ BACK TO TOP ══ -->
+  <a href="#hero" class="back-to-top" id="backToTop" aria-label="Back to top">↑</a>
+
+
+  <!-- ══ JS ══ -->
+  <script>
+    // Mobile nav toggle
+    const toggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+
+    // Close mobile nav on link click
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+
+    // Back to top visibility
+    const btt = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      btt.classList.toggle('visible', window.scrollY > 400);
+    });
+
+    // Animate elements into view on scroll
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(
+      '.about-card, .about-text, .skill-group, .timeline-item, .cert-card, .project-card, .contact-item'
+    ).forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(22px)';
+      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      observer.observe(el);
+    });
+  </script>
+
+</body>
+</html>            </div>
 
             <div class="progress">
               <span class="skill">Flask <i class="val">70%</i></span>
